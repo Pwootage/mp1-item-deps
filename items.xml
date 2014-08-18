@@ -4,7 +4,7 @@
         <location id="0" area="tallon">
             <room>Landing Site</room>
             <description>In morph tunnel behind ship</description>
-            <item id="0"/>
+            <item id="me"/>
             <requirements>
                 <requirement id="morph"/>
             </requirements>
@@ -12,10 +12,16 @@
         <location id="1" area="tallon">
             <room>Alcove</room>
             <description>Space Jump</description>
-            <item id="1"/>
+            <item id="spacejump"/>
             <requirements>
                 <requirement id="scanjump" difficutly="2"/>
             </requirements>
+        </location>
+        <location id="2" area="tallon">
+            <room>Artifact Temple</room>
+            <description>Artifact of Truth</description>
+            <item id="truth"/>
+            <requirements />
         </location>
     </locations>
     <areas>
@@ -26,20 +32,107 @@
         <area id="mines">Phazon Mines</area>
     </areas>
     <items>
-        <item id="0">
+        <item id="me">
             <name>Missile Expansion</name>
         </item>
-        <item id="1">
+        <item id="spacejump">
             <name>Space Jump</name>
         </item>
-        <item id="2">
+        <item id="morph">
             <name>Morph Ball</name>
+        </item>
+        <item id="varia">
+            <name>Varia Suit</name>
+        </item>
+        <item id="gravity">
+            <name>Gravity Suit</name>
+        </item>
+        <item id="phazon">
+            <name>Phazon Suit</name>
+        </item>
+        <item id="wave">
+            <name>Wave Beam</name>
+        </item>
+        <item id="ice">
+            <name>Ice Beam</name>
+        </item>
+        <item id="plasma">
+            <name>Plasma Beam</name>
+        </item>
+        <item id="truth">
+            <name>Artifact of Truth</name>
+        </item>
+        <item id="strength">
+            <name>Artifact of Strength</name>
+        </item>
+        <item id="elder">
+            <name>Artifact of Elder</name>
+        </item>
+        <item id="wild">
+            <name>Artifact of Wild</name>
+        </item>
+        <item id="lifegiver">
+            <name>Artifact of Lifegiver</name>
+        </item>
+        <item id="warrior">
+            <name>Artifact of Warrior</name>
+        </item>
+        <item id="chozo">
+            <name>Artifact of Chozo</name>
+        </item>
+        <item id="nature">
+            <name>Artifact of Nature</name>
+        </item>
+        <item id="sun">
+            <name>Artifact of Sun</name>
+        </item>
+        <item id="world">
+            <name>Artifact of World</name>
+        </item>
+        <item id="spirit">
+            <name>Artifact of Spirit</name>
+        </item>
+        <item id="newborn">
+            <name>Artifact of Newborn</name>
         </item>
     </items>
     <requirements>
         <requirement id="morph" type="item">
-            <item id="2"/>
+            <item id="morph"/>
+        </requirement>
+        <requirement id="wave" type="item">
+            <item id="wave" />
+        </requirement>
+        <requirement id="ice" type="item">
+            <item id="ice" />
+        </requirement>
+        <requirement id="plasma" type="item">
+            <item id="plasma" />
+        </requirement>
+        <requirement id="phazon" type="item">
+            <item id="phazon" />
         </requirement>
         <requirement id="scanjump" type="trick" />
+        <requirement id="artifacts" type="item">
+            <item id="truth" />
+            <item id="strength" />
+            <item id="elder" />
+            <item id="wild" />
+            <item id="lifegiver" />
+            <item id="warrior" />
+            <item id="chozo" />
+            <item id="nature" />
+            <item id="sun" />
+            <item id="world" />
+            <item id="spirit" />
+            <item id="newborn" />
+        </requirement>
     </requirements>
+    <completion>
+        <requirement id="artifacts" />
+        <requirement id="phazon" />
+        <requirement id="wave" />
+        <requirement id="ice" />
+        <requirement id="plasma" />
+    </completion>
 </dependencies>
