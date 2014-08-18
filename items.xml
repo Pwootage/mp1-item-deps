@@ -6,7 +6,9 @@
             <description>In morph tunnel behind ship</description>
             <item id="me"/>
             <requirements>
-                <requirement id="morph"/>
+                <requirementset>
+                    <requirement id="morph"/>
+                </requirementset>
             </requirements>
         </location>
         <location id="1" area="tallon">
@@ -14,14 +16,24 @@
             <description>Space Jump</description>
             <item id="spacejump"/>
             <requirements>
-                <requirement id="scanjump" difficutly="2"/>
+                <requirementset>
+                    <requirement id="scanjump" difficutly="2"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="bombs"/>
+                    <requirement id="boost"/>
+                </requirementset>
             </requirements>
         </location>
         <location id="2" area="tallon">
             <room>Artifact Temple</room>
             <description>Artifact of Truth</description>
             <item id="truth"/>
-            <requirements />
+            <requirements>
+                <requirementset>
+                    <requirement id="missiles"/>
+                </requirementset>
+            </requirements>
         </location>
     </locations>
     <areas>
@@ -32,6 +44,9 @@
         <area id="mines">Phazon Mines</area>
     </areas>
     <items>
+        <item id="ml">
+            <name>Missile Launcher</name>
+        </item>
         <item id="me">
             <name>Missile Expansion</name>
         </item>
@@ -40,6 +55,15 @@
         </item>
         <item id="morph">
             <name>Morph Ball</name>
+        </item>
+        <item id="bombs">
+            <name>Morph Ball Bombs</name>
+        </item>
+        <item id="pb">
+            <name>Main Power Bombs</name>
+        </item>
+        <item id="pbe">
+            <name>Power Bomb Expansion</name>
         </item>
         <item id="varia">
             <name>Varia Suit</name>
@@ -101,38 +125,71 @@
             <item id="morph"/>
         </requirement>
         <requirement id="wave" type="item">
-            <item id="wave" />
+            <item id="wave"/>
         </requirement>
         <requirement id="ice" type="item">
-            <item id="ice" />
+            <item id="ice"/>
         </requirement>
         <requirement id="plasma" type="item">
-            <item id="plasma" />
+            <item id="plasma"/>
         </requirement>
         <requirement id="phazon" type="item">
-            <item id="phazon" />
+            <item id="phazon"/>
         </requirement>
-        <requirement id="scanjump" type="trick" />
+        <requirement id="bombs" type="item">
+            <item id="bombs"/>
+        </requirement>
+        <requirement id="me" type="item">
+            <item id="me"/>
+        </requirement>
+        <requirement id="ml" type="item">
+            <item id="ml"/>
+        </requirement>
+        <requirement id="pb" type="item">
+            <item id="pb"/>
+        </requirement>
+        <requirement id="pbe" type="item">
+            <item id="pbe"/>
+        </requirement>
+        <requirement id="scanjump" type="trick"/>
         <requirement id="artifacts" type="item">
-            <item id="truth" />
-            <item id="strength" />
-            <item id="elder" />
-            <item id="wild" />
-            <item id="lifegiver" />
-            <item id="warrior" />
-            <item id="chozo" />
-            <item id="nature" />
-            <item id="sun" />
-            <item id="world" />
-            <item id="spirit" />
-            <item id="newborn" />
+            <item id="truth"/>
+            <item id="strength"/>
+            <item id="elder"/>
+            <item id="wild"/>
+            <item id="lifegiver"/>
+            <item id="warrior"/>
+            <item id="chozo"/>
+            <item id="nature"/>
+            <item id="sun"/>
+            <item id="world"/>
+            <item id="spirit"/>
+            <item id="newborn"/>
+        </requirement>
+        <requirement id="missiles" type="composite">
+            <requirementset>
+                <requirement id="me"/>
+            </requirementset>
+            <requirementset>
+                <requirement id="ml"/>
+            </requirementset>
+        </requirement>
+        <requirement id="powerbomb" type="composite">
+            <requirementset>
+                <requirement id="pb"/>
+            </requirementset>
+            <requirementset>
+                <requirement id="pbe"/>
+            </requirementset>
+        </requirement>
+        <requirement id="completion" type="composite">
+            <requirementset>
+                <requirement id="artifacts"/>
+                <requirement id="phazon"/>
+                <requirement id="wave"/>
+                <requirement id="ice"/>
+                <requirement id="plasma"/>
+            </requirementset>
         </requirement>
     </requirements>
-    <completion>
-        <requirement id="artifacts" />
-        <requirement id="phazon" />
-        <requirement id="wave" />
-        <requirement id="ice" />
-        <requirement id="plasma" />
-    </completion>
 </dependencies>
