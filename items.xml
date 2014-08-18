@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <dependencies>
     <locations>
+        <!--
+        <location id="" area="">
+            <room></room>
+            <description></description>
+            <item id=""/>
+            <requirements>
+                <requirementset>
+                    <requirement id=""/>
+                </requirementset>
+            </requirements>
+        </location>
+        -->
         <location id="0" area="tallon">
             <room>Landing Site</room>
             <description>In morph tunnel behind ship</description>
@@ -29,6 +41,80 @@
             <room>Artifact Temple</room>
             <description>Artifact of Truth</description>
             <item id="truth"/>
+            <requirements>
+                <requirementset>
+                    <requirement id="missiles"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="oob" difficutly="7"/>
+                </requirementset>
+            </requirements>
+        </location>
+        <location id="3" area="tallon">
+            <room>Root Cave</room>
+            <description>After invisible platforms and behind invisible wall</description>
+            <item id="me"/>
+            <requirements>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="spacejump"/>
+                    <requirement id="xray"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="noxray" difficutly="3"/>
+                    <requirement id="spacejump"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="bombs"/>
+                    <requirement id="nosj" difficutly="6"/>
+                </requirementset>
+            </requirements>
+        </location>
+        <location id="4" area="tallon">
+            <room>Arbor Chamber</room>
+            <description>At the top of Root Cave, past the invisible platforms</description>
+            <item id="me"/>
+            <requirements>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="spacejump"/>
+                    <requirement id="xray"/>
+                    <requirement id="plasma"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="noxray" difficutly="3"/>
+                    <requirement id="spacejump"/>
+                    <requirement id="plasma"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="bombs"/>
+                    <requirement id="nosj" difficutly="6"/>
+                    <requirement id="plasma"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="spacejump"/>
+                    <requirement id="xray"/>
+                    <requirement id="bombs"/>
+                    <requirement id="oob" difficutly="4"/>
+                </requirementset>
+                <requirementset>
+                    <requirement id="missiles"/>
+                    <requirement id="noxray" difficutly="3"/>
+                    <requirement id="spacejump"/>
+                    <requirement id="bombs"/>
+                    <requirement id="oob" difficutly="4"/>
+                </requirementset>
+            </requirements>
+        </location>
+        <location id="5" area="tallon">
+            <room>Transport Tunnel D</room>
+            <description>Under the bridge</description>
+            <item id="me"/>
             <requirements>
                 <requirementset>
                     <requirement id="missiles"/>
@@ -82,6 +168,12 @@
         </item>
         <item id="plasma">
             <name>Plasma Beam</name>
+        </item>
+        <item id="xray">
+            <name>X-Ray Visor</name>
+        </item>
+        <item id="thermal">
+            <name>Thermal Visor</name>
         </item>
         <item id="truth">
             <name>Artifact of Truth</name>
@@ -151,7 +243,12 @@
         <requirement id="pbe" type="item">
             <item id="pbe"/>
         </requirement>
-        <requirement id="scanjump" type="trick"/>
+        <requirement id="xray" type="item">
+            <item id="xray"/>
+        </requirement>
+        <requirement id="thermal" type="item">
+            <item id="thermal"/>
+        </requirement>
         <requirement id="artifacts" type="item">
             <item id="truth"/>
             <item id="strength"/>
@@ -191,5 +288,10 @@
                 <requirement id="plasma"/>
             </requirementset>
         </requirement>
+        <requirement id="scanjump" type="trick"/>
+        <requirement id="oob" type="trick"/>
+        <requirement id="hpbj" type="trick"/>
+        <requirement id="noxray" type="trick"/>
+        <requirement id="nosj" type="trick"/>
     </requirements>
 </dependencies>
