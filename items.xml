@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dependencies>
+    <locations>
+        <location id="0" area="tallon">
+            <room>Landing Site</room>
+            <description>In morph tunnel behind ship</description>
+            <item id="0"/>
+            <requirements>
+                <requirement id="morph"/>
+            </requirements>
+        </location>
+        <location id="1" area="tallon">
+            <room>Alcove</room>
+            <description>Space Jump</description>
+            <item id="1"/>
+            <requirements>
+                <requirement id="scanjump" difficutly="2"/>
+            </requirements>
+        </location>
+    </locations>
+    <areas>
+        <area id="tallon">Talon Overworld</area>
+        <area id="ruins">Chozo Ruins</area>
+        <area id="magmoor">Magmoor Caverns</area>
+        <area id="phen">Phendrena Drifts</area>
+        <area id="mines">Phazon Mines</area>
+    </areas>
+    <items>
+        <item id="0">
+            <name>Missile Expansion</name>
+        </item>
+        <item id="1">
+            <name>Space Jump</name>
+        </item>
+        <item id="2">
+            <name>Morph Ball</name>
+        </item>
+    </items>
+    <requirements>
+        <requirement id="morph" type="item">
+            <item id="2"/>
+        </requirement>
+        <requirement id="scanjump" type="trick" />
+    </requirements>
+</dependencies>
